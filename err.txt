@@ -1,0 +1,451 @@
+
+...Compiling Tux Paint from source...
+cc  -O2 -W -Wall -fno-common -ffloat-store -fvisibility=hidden -Wcast-align -Wredundant-decls -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wstrict-aliasing=2  -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/SDL   -I/usr/include/fribidi   -pthread -I/usr/include/librsvg-2.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/cairo -I/usr/include/libpng12 -I/usr/include/pixman-1 -I/usr/include/freetype2   -Isrc/mouse -DLARGE_CURSOR_SHAPES -DVER_DATE=\"2014-09-10\" -DVER_VERSION=\"0.9.22\" -DDATA_PREFIX=\"/usr/local/share/tuxpaint/\" -DDOC_PREFIX=\"/usr/local/share/doc/tuxpaint/\" -DLOCALEDIR=\"/usr/local/share/locale/\" -DIMDIR=\"/usr/local/share/tuxpaint/im/\" -DCONFDIR=\"/usr/local/etc/tuxpaint/\" -DMAGIC_PREFIX=\"/usr/local/lib/tuxpaint/plugins/\"      \
+		-c src/tuxpaint.c -o obj/tuxpaint.o
+In file included from src/tuxpaint.c:453:0:
+/usr/include/librsvg-2.0/librsvg/rsvg-cairo.h:27:2: warning: #warning "Including <librsvg/rsvg-cairo.h> directly is deprecated." [-Wcpp]
+ #warning "Including <librsvg/rsvg-cairo.h> directly is deprecated."
+  ^
+src/tuxpaint.c: In function ‘loadstamp_callback’:
+src/tuxpaint.c:7428:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  && (dotext - files[i].str + 1 + dirlen < sizeof fname)
+                                         ^
+src/tuxpaint.c: At top level:
+src/tuxpaint.c:7513:5: warning: no previous prototype for ‘generate_fontconfig_cache_spinner’ [-Wmissing-prototypes]
+ int generate_fontconfig_cache_spinner(SDL_Surface * screen)
+     ^
+src/tuxpaint.c: In function ‘generate_fontconfig_cache’:
+src/tuxpaint.c:7576:44: warning: unused parameter ‘vp’ [-Wunused-parameter]
+ static int generate_fontconfig_cache(void *vp)
+                                            ^
+src/tuxpaint.c: In function ‘thumbnail2’:
+src/tuxpaint.c:9174:13: warning: unused variable ‘gamma_invert’ [-Wunused-variable]
+       float gamma_invert = 1.0 / gamma;
+             ^
+src/tuxpaint.c: In function ‘load_starter_helper’:
+src/tuxpaint.c:11165:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (i = 0; i < strlen(ext); i++) {
+                   ^
+src/tuxpaint.c: In function ‘load_starter’:
+src/tuxpaint.c:11204:5: warning: passing argument 2 of ‘load_starter_helper’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     tmp_surf = load_starter_helper(fname, "svg", &load_svg);
+     ^
+src/tuxpaint.c:11154:22: note: expected ‘char *’ but argument is of type ‘const char *’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:11211:5: warning: passing argument 2 of ‘load_starter_helper’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     tmp_surf = load_starter_helper(fname, "png", &IMG_Load);
+     ^
+src/tuxpaint.c:11154:22: note: expected ‘char *’ but argument is of type ‘const char *’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:11211:5: warning: passing argument 3 of ‘load_starter_helper’ from incompatible pointer type [enabled by default]
+     tmp_surf = load_starter_helper(fname, "png", &IMG_Load);
+     ^
+src/tuxpaint.c:11154:22: note: expected ‘struct SDL_Surface * (*)(char *)’ but argument is of type ‘struct SDL_Surface * (*)(const char *)’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:11218:5: warning: passing argument 2 of ‘load_starter_helper’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     tmp_surf = load_starter_helper(fname, "kpx", &myIMG_Load);
+     ^
+src/tuxpaint.c:11154:22: note: expected ‘char *’ but argument is of type ‘const char *’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:11237:5: warning: passing argument 2 of ‘load_starter_helper’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     tmp_surf = load_starter_helper(fname, "svg", &load_svg);
+     ^
+src/tuxpaint.c:11154:22: note: expected ‘char *’ but argument is of type ‘const char *’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:11245:5: warning: passing argument 2 of ‘load_starter_helper’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     tmp_surf = load_starter_helper(fname, "jpeg", &IMG_Load);
+     ^
+src/tuxpaint.c:11154:22: note: expected ‘char *’ but argument is of type ‘const char *’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:11245:5: warning: passing argument 3 of ‘load_starter_helper’ from incompatible pointer type [enabled by default]
+     tmp_surf = load_starter_helper(fname, "jpeg", &IMG_Load);
+     ^
+src/tuxpaint.c:11154:22: note: expected ‘struct SDL_Surface * (*)(char *)’ but argument is of type ‘struct SDL_Surface * (*)(const char *)’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:11252:5: warning: passing argument 2 of ‘load_starter_helper’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     tmp_surf = load_starter_helper(fname, "jpg", &IMG_Load);
+     ^
+src/tuxpaint.c:11154:22: note: expected ‘char *’ but argument is of type ‘const char *’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:11252:5: warning: passing argument 3 of ‘load_starter_helper’ from incompatible pointer type [enabled by default]
+     tmp_surf = load_starter_helper(fname, "jpg", &IMG_Load);
+     ^
+src/tuxpaint.c:11154:22: note: expected ‘struct SDL_Surface * (*)(char *)’ but argument is of type ‘struct SDL_Surface * (*)(const char *)’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:11259:5: warning: passing argument 2 of ‘load_starter_helper’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     tmp_surf = load_starter_helper(fname, "png", &IMG_Load);
+     ^
+src/tuxpaint.c:11154:22: note: expected ‘char *’ but argument is of type ‘const char *’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:11259:5: warning: passing argument 3 of ‘load_starter_helper’ from incompatible pointer type [enabled by default]
+     tmp_surf = load_starter_helper(fname, "png", &IMG_Load);
+     ^
+src/tuxpaint.c:11154:22: note: expected ‘struct SDL_Surface * (*)(char *)’ but argument is of type ‘struct SDL_Surface * (*)(const char *)’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c: In function ‘load_template’:
+src/tuxpaint.c:11383:3: warning: passing argument 2 of ‘load_starter_helper’ discards ‘const’ qualifier from pointer target type [enabled by default]
+   tmp_surf = load_starter_helper(fname, "kpx", &myIMG_Load);
+   ^
+src/tuxpaint.c:11154:22: note: expected ‘char *’ but argument is of type ‘const char *’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:11390:5: warning: passing argument 2 of ‘load_starter_helper’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     tmp_surf = load_starter_helper(fname, "svg", &load_svg);
+     ^
+src/tuxpaint.c:11154:22: note: expected ‘char *’ but argument is of type ‘const char *’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:11398:5: warning: passing argument 2 of ‘load_starter_helper’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     tmp_surf = load_starter_helper(fname, "jpeg", &IMG_Load);
+     ^
+src/tuxpaint.c:11154:22: note: expected ‘char *’ but argument is of type ‘const char *’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:11398:5: warning: passing argument 3 of ‘load_starter_helper’ from incompatible pointer type [enabled by default]
+     tmp_surf = load_starter_helper(fname, "jpeg", &IMG_Load);
+     ^
+src/tuxpaint.c:11154:22: note: expected ‘struct SDL_Surface * (*)(char *)’ but argument is of type ‘struct SDL_Surface * (*)(const char *)’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:11404:5: warning: passing argument 2 of ‘load_starter_helper’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     tmp_surf = load_starter_helper(fname, "jpg", &IMG_Load);
+     ^
+src/tuxpaint.c:11154:22: note: expected ‘char *’ but argument is of type ‘const char *’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:11404:5: warning: passing argument 3 of ‘load_starter_helper’ from incompatible pointer type [enabled by default]
+     tmp_surf = load_starter_helper(fname, "jpg", &IMG_Load);
+     ^
+src/tuxpaint.c:11154:22: note: expected ‘struct SDL_Surface * (*)(char *)’ but argument is of type ‘struct SDL_Surface * (*)(const char *)’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:11411:5: warning: passing argument 2 of ‘load_starter_helper’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     tmp_surf = load_starter_helper(fname, "png", &IMG_Load);
+     ^
+src/tuxpaint.c:11154:22: note: expected ‘char *’ but argument is of type ‘const char *’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:11411:5: warning: passing argument 3 of ‘load_starter_helper’ from incompatible pointer type [enabled by default]
+     tmp_surf = load_starter_helper(fname, "png", &IMG_Load);
+     ^
+src/tuxpaint.c:11154:22: note: expected ‘struct SDL_Surface * (*)(char *)’ but argument is of type ‘struct SDL_Surface * (*)(const char *)’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c: In function ‘do_prompt_image_flash_snd’:
+src/tuxpaint.c:11668:42: warning: variable ‘img_x’ set but not used [-Wunused-but-set-variable]
+   int img1_w, img2_w, img3_w, max_img_w, img_x, img_y, offset;
+                                          ^
+src/tuxpaint.c: In function ‘set_chunk_data’:
+src/tuxpaint.c:12979:3: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t’ [-Wformat=]
+   sprintf(line, "%d%s", uncompressed_size, "\n");
+   ^
+src/tuxpaint.c:12981:3: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t’ [-Wformat=]
+   sprintf(line, "%d%s", dataLen, "\n");
+   ^
+src/tuxpaint.c: In function ‘do_png_embed_data’:
+src/tuxpaint.c:13036:17: warning: unused variable ‘fname’ [-Wunused-variable]
+   char *ldata, *fname;
+                 ^
+src/tuxpaint.c: In function ‘handle_active’:
+src/tuxpaint.c:16960:27: warning: suggest parentheses around arithmetic in operand of ‘|’ [-Wparentheses]
+   if (event->active.state & SDL_APPINPUTFOCUS|SDL_APPACTIVE)
+                           ^
+src/tuxpaint.c: In function ‘do_new_dialog’:
+src/tuxpaint.c:18735:17: warning: passing argument 2 of ‘load_starter_helper’ discards ‘const’ qualifier from pointer target type [enabled by default]
+                 img = load_starter_helper(fname, "jpeg", &IMG_Load);
+                 ^
+src/tuxpaint.c:11154:22: note: expected ‘char *’ but argument is of type ‘const char *’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:18735:17: warning: passing argument 3 of ‘load_starter_helper’ from incompatible pointer type [enabled by default]
+                 img = load_starter_helper(fname, "jpeg", &IMG_Load);
+                 ^
+src/tuxpaint.c:11154:22: note: expected ‘struct SDL_Surface * (*)(char *)’ but argument is of type ‘struct SDL_Surface * (*)(const char *)’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:18740:19: warning: passing argument 2 of ‘load_starter_helper’ discards ‘const’ qualifier from pointer target type [enabled by default]
+                   img = load_starter_helper(fname, "jpg", &IMG_Load);
+                   ^
+src/tuxpaint.c:11154:22: note: expected ‘char *’ but argument is of type ‘const char *’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:18740:19: warning: passing argument 3 of ‘load_starter_helper’ from incompatible pointer type [enabled by default]
+                   img = load_starter_helper(fname, "jpg", &IMG_Load);
+                   ^
+src/tuxpaint.c:11154:22: note: expected ‘struct SDL_Surface * (*)(char *)’ but argument is of type ‘struct SDL_Surface * (*)(const char *)’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:18749:17: warning: passing argument 2 of ‘load_starter_helper’ discards ‘const’ qualifier from pointer target type [enabled by default]
+                 img = load_starter_helper(fname, "svg", &load_svg);
+                 ^
+src/tuxpaint.c:11154:22: note: expected ‘char *’ but argument is of type ‘const char *’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:18758:19: warning: passing argument 2 of ‘load_starter_helper’ discards ‘const’ qualifier from pointer target type [enabled by default]
+                   img = load_starter_helper(fname, "png", &IMG_Load);
+                   ^
+src/tuxpaint.c:11154:22: note: expected ‘char *’ but argument is of type ‘const char *’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c:18758:19: warning: passing argument 3 of ‘load_starter_helper’ from incompatible pointer type [enabled by default]
+                   img = load_starter_helper(fname, "png", &IMG_Load);
+                   ^
+src/tuxpaint.c:11154:22: note: expected ‘struct SDL_Surface * (*)(char *)’ but argument is of type ‘struct SDL_Surface * (*)(const char *)’
+ static SDL_Surface * load_starter_helper(char * path_and_basename, char * extension, SDL_Surface * (*load_func)(char *)) {
+                      ^
+src/tuxpaint.c: In function ‘derender_node’:
+src/tuxpaint.c:20469:47: warning: unused parameter ‘ref_head’ [-Wunused-parameter]
+ static void derender_node(struct label_node** ref_head)
+                                               ^
+src/tuxpaint.c: In function ‘load_info_about_label_surface’:
+src/tuxpaint.c:20564:15: warning: unused variable ‘pix_size’ [-Wunused-variable]
+     int x, y, pix_size;
+               ^
+src/tuxpaint.c: In function ‘load_embedded_data’:
+src/tuxpaint.c:21244:2: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘png_size_t’ [-Wformat=]
+  printf("%s, %d\n", unknowns[u].name, unknowns[u].size);
+  ^
+src/tuxpaint.c: In function ‘setup_config’:
+src/tuxpaint.c:22126:7: warning: passing argument 1 of ‘strtok’ discards ‘const’ qualifier from pointer target type [enabled by default]
+       token = strtok(tmpcfg.joystick_buttons_ignore, ",");
+       ^
+In file included from src/tuxpaint.c:181:0:
+/usr/include/string.h:348:14: note: expected ‘char * __restrict__’ but argument is of type ‘const char *’
+ extern char *strtok (char *__restrict __s, const char *__restrict __delim)
+              ^
+src/tuxpaint.c:22130:4: warning: too many arguments for format [-Wformat-extra-args]
+    printf("Joystick buttons must be between 0 and 254", tmpcfg.joystick_button_print);
+    ^
+src/tuxpaint.c:22123:11: warning: unused variable ‘i’ [-Wunused-variable]
+       int i;
+           ^
+src/tuxpaint.c: At top level:
+src/tuxpaint.c:22457:5: warning: no previous prototype for ‘TP_EventFilter’ [-Wmissing-prototypes]
+ int TP_EventFilter(const SDL_Event * event)
+     ^
+src/tuxpaint.c: In function ‘main’:
+src/tuxpaint.c:23591:14: warning: unused variable ‘time3’ [-Wunused-variable]
+   CLOCK_TYPE time3;
+              ^
+src/tuxpaint.c:23590:14: warning: unused variable ‘time2’ [-Wunused-variable]
+   CLOCK_TYPE time2;
+              ^
+src/tuxpaint.c:23589:14: warning: unused variable ‘time1’ [-Wunused-variable]
+   CLOCK_TYPE time1;
+              ^
+src/tuxpaint.c:23588:7: warning: unused variable ‘i’ [-Wunused-variable]
+   int i; 
+       ^
+In file included from src/tuxpaint.c:488:0:
+src/tuxpaint.c: At top level:
+src/fonts.h:116:13: warning: ‘reliable_read’ declared ‘static’ but never defined [-Wunused-function]
+ static void reliable_read(int fd, void *buf, size_t count);
+             ^
+src/tuxpaint.c:649:20: warning: ‘getfilename’ defined but not used [-Wunused-function]
+ static const char *getfilename(const char *path)
+                    ^
+src/tuxpaint.c:5548:6: warning: ‘reset_brush_counter_and_frame’ defined but not used [-Wunused-function]
+ void reset_brush_counter_and_frame(void)
+      ^
+src/tuxpaint.c:16981:14: warning: ‘remove_slash’ defined but not used [-Wunused-function]
+ static char *remove_slash(char *path)
+              ^
+src/tuxpaint.c:17218:12: warning: ‘in_circle’ defined but not used [-Wunused-function]
+ static int in_circle(int x, int y)
+            ^
+src/tuxpaint.c: In function ‘chdir_to_binary’:
+src/tuxpaint.c:22170:15: warning: ignoring return value of ‘getcwd’, declared with attribute warn_unused_result [-Wunused-result]
+         getcwd(curdir, sizeof(curdir));
+               ^
+src/tuxpaint.c: In function ‘setup_config’:
+src/tuxpaint.c:21724:13: warning: ignoring return value of ‘asprintf’, declared with attribute warn_unused_result [-Wunused-result]
+     asprintf((char**)&savedir, "%s/%s", home, ".tuxpaint");
+             ^
+src/tuxpaint.c: In function ‘setup_colors’:
+src/tuxpaint.c:22246:7: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+  fgets(str, sizeof(str), fi);
+       ^
+src/tuxpaint.c: In function ‘loadbrush_callback’:
+src/tuxpaint.c:6499:9: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+    fgets(buf, sizeof(buf), fi);
+         ^
+src/tuxpaint.c: In function ‘load_current’:
+src/tuxpaint.c:11469:10: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(file_id, sizeof(file_id), fi);
+          ^
+src/tuxpaint.c: In function ‘load_starter_id’:
+src/tuxpaint.c:11091:10: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(starter_id, sizeof(starter_id), fi);
+          ^
+src/tuxpaint.c:11094:11: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+     fscanf(fi, "%d", &starter_mirrored);
+           ^
+src/tuxpaint.c:11095:11: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+     fscanf(fi, "%d", &starter_flipped);
+           ^
+src/tuxpaint.c:11096:11: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+     fscanf(fi, "%d", &starter_personal);
+           ^
+src/tuxpaint.c:11106:13: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+       fscanf(fi, "%d", &r);
+             ^
+src/tuxpaint.c:11107:13: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+       fscanf(fi, "%d", &g);
+             ^
+src/tuxpaint.c:11108:13: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+       fscanf(fi, "%d", &b);
+             ^
+src/tuxpaint.c:11129:22: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+                 fgets(template_id, sizeof(template_id), fi);
+                      ^
+src/tuxpaint.c:11131:23: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+                 fscanf(fi, "%d", &template_personal);
+                       ^
+src/tuxpaint.c: In function ‘load_embedded_data’:
+src/tuxpaint.c:21263:9: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+    fgets(control, 49, fi);
+         ^
+src/tuxpaint.c:21264:9: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+    fgets(control, 49, fi);
+         ^
+src/tuxpaint.c:21265:9: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+    fgets(control, 49, fi);
+         ^
+src/tuxpaint.c:21266:9: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+    fgets(control, 49, fi);
+         ^
+src/tuxpaint.c: In function ‘load_info_about_label_surface’:
+src/tuxpaint.c:20582:11: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+     fscanf(lfi, "%d\n", &list_ctr);
+           ^
+src/tuxpaint.c:20583:11: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+     fscanf(lfi, "%d\n", &tmp_scale_w);
+           ^
+src/tuxpaint.c:20584:11: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+     fscanf(lfi, "%d\n\n", &tmp_scale_h);
+           ^
+src/tuxpaint.c:20601:19: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+             fscanf(lfi , "%u\n", &new_node->save_texttool_len);
+                   ^
+src/tuxpaint.c:20617:27: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+                     fscanf(lfi, "%lc", &tmp_char);
+                           ^
+src/tuxpaint.c:20620:19: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+             fscanf(lfi, "\n");
+                   ^
+src/tuxpaint.c:20622:19: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+             fscanf(lfi, "%u\n", &l);
+                   ^
+src/tuxpaint.c:20624:19: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+             fscanf(lfi, "%u\n", &l);
+                   ^
+src/tuxpaint.c:20626:19: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+             fscanf(lfi, "%u\n", &l);
+                   ^
+src/tuxpaint.c:20628:19: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+             fscanf(lfi, "%d\n", &new_node->save_width);
+                   ^
+src/tuxpaint.c:20629:19: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+             fscanf(lfi, "%d\n", &new_node->save_height);
+                   ^
+src/tuxpaint.c:20630:19: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+             fscanf(lfi, "%d\n", &tmp_pos);
+                   ^
+src/tuxpaint.c:20638:27: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+                     fscanf(lfi, "%d\n", &tmp_pos);
+                           ^
+src/tuxpaint.c:20649:27: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+                     fscanf(lfi, "%d\n", &tmp_pos);
+                           ^
+src/tuxpaint.c:20658:19: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+             fscanf(lfi, "%d\n", &new_node->save_cur_font);
+                   ^
+src/tuxpaint.c:20662:11: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+      fgets(new_node->save_font_type, 64, lfi);
+           ^
+src/tuxpaint.c:20664:19: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+             fscanf(lfi, "%d\n", &new_node->save_text_state);
+                   ^
+src/tuxpaint.c:20665:19: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+             fscanf(lfi, "%u\n", &new_node->save_text_size);
+                   ^
+src/tuxpaint.c:20705:19: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+             fscanf(lfi, "\n");
+                   ^
+src/tuxpaint.c: In function ‘trash’:
+src/tuxpaint.c:23802:9: warning: ignoring return value of ‘system’, declared with attribute warn_unused_result [-Wunused-result]
+   system("dbus-send / org.kde.KDirNotify.FilesAdded string:trash:/");
+         ^
+src/tuxpaint.c: In function ‘loadinfo’:
+src/tuxpaint.c:10833:10: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(buf, sizeof buf, fi);
+          ^
+src/tuxpaint.c: In function ‘loaddesc’:
+src/tuxpaint.c:10738:12: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+       fgets(buf, sizeof(buf), fi);
+            ^
+
+...Compiling i18n support...
+src/i18n.c: In function ‘set_current_language’:
+src/i18n.c:883:7: warning: unused variable ‘y_nudge’ [-Wunused-variable]
+   int y_nudge = 0;
+       ^
+
+...Compiling IM support...
+src/im.c: In function ‘im_event_zh_tw’:
+src/im.c:899:18: warning: operation on ‘cm.section’ may be undefined [-Wsequence-point]
+       cm.section = (++cm.section % SEC_TOTAL);   /* Change section */
+                  ^
+src/im.c: In function ‘im_event_th’:
+src/im.c:1085:18: warning: operation on ‘cm.section’ may be undefined [-Wsequence-point]
+       cm.section = (++cm.section % SEC_TOTAL);   /* Change section */
+                  ^
+src/im.c: In function ‘im_event_ja’:
+src/im.c:1271:18: warning: operation on ‘cm.section’ may be undefined [-Wsequence-point]
+       cm.section = (++cm.section % SEC_TOTAL);   /* Change section */
+                  ^
+src/im.c: In function ‘im_event_ko’:
+src/im.c:1481:18: warning: operation on ‘cm.section’ may be undefined [-Wsequence-point]
+       cm.section = (++cm.section % SEC_TOTAL);   /* Change section */
+                  ^
+src/im.c: In function ‘charmap_load’:
+src/im.c:538:13: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+       fscanf(is, "%*[^\n]");
+             ^
+
+...Compiling cursor support...
+
+...Compiling pixel functions...
+
+...Compiling RGB to Linear functions...
+
+...Compiling sound playback functions...
+In file included from src/playsound.h:29:0,
+                 from src/playsound.c:25:
+src/sounds.h:80:20: warning: ‘sound_fnames’ defined but not used [-Wunused-variable]
+ static const char *sound_fnames[NUM_SOUNDS] = {
+                    ^
+
+...Compiling font support...
+src/fonts.c:162:23: warning: ‘try_alternate_font’ defined but not used [-Wunused-function]
+ static TuxPaint_Font *try_alternate_font(int size)
+                       ^
+src/fonts.c: In function ‘run_font_scanner’:
+src/fonts.c:1034:7: warning: ignoring return value of ‘nice’, declared with attribute warn_unused_result [-Wunused-result]
+   nice(42);   // be nice, letting the main thread get the CPU
+       ^
+
+...Generating the command-line and config file parser (STEP 1)...
+Please install 'gperf' and try again!
+make: *** [obj/parse_step1.c] Error 1
