@@ -6400,7 +6400,7 @@ void show_usage(int exitcode)
 	  blank, blank, blank, blank,
 	  blank, blank, blank, blank,
 	  blank, blank, blank, blank,
-	  blank, blank, blank, blank, blank, blank, blank, blank, blank,
+	  blank, blank, blank, blank, blank, blank, blank, blank, blank, blank,
 #ifdef WIN32
 	  blank,
 #endif
@@ -23623,9 +23623,7 @@ static void claim_to_be_ready(void)
 
   if (in_file)
     load_in_file();
-  
-  /* Load current image (if any): */
-  if (start_blank == 0)
+  else if (start_blank == 0) 
     load_current();
 
   been_saved = 1;
